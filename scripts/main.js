@@ -68,6 +68,7 @@ close.addEventListener('click', closeModal);
 
 function showMenu() {
   menu.classList.add('header__mobmenu_showed');
+  nav.classList.add('mobmenu__nav_showed');
   document.addEventListener('keydown', function(e) {
     if (e.keyCode == keys.ESC) {
       closeMenu();
@@ -77,6 +78,7 @@ function showMenu() {
 
 function closeMenu() {
   menu.classList.remove('header__mobmenu_showed');
+  nav.classList.remove('mobmenu__nav_showed');
 }
 
 burger.addEventListener('click', showMenu);

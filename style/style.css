@@ -94,22 +94,28 @@ a:focus {
   visibility: hidden;
   opacity: 0;
   background: #ff2f9530;
-  transition: all 0.25s ease-in-out;
   z-index: 10;
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
 }
 
 .header__mobmenu_showed {
   visibility: visible;
   opacity: 1;
-  transition: all 0.5s ease-in-out;
 }
 
 .mobmenu__nav {
   padding: 20px 0 0 20px;
   height: 100%;
   width: 320px;
+  left: -320px;;
   background-color: white;
   position: relative;
+  transition: left 0.25s ease-in-out;
+}
+
+.mobmenu__nav_showed {
+  left: 0;
+  
 }
 
 .mobmenu__nav a {
@@ -215,14 +221,13 @@ a:focus {
   height: 45px;
   border: 1px solid #f82370;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
 .callback-button:hover {
   background-color: #ff4e2e;
   color: #ffffff;
   border: none;
-  transition:  all 0.2s ease-in-out;
 }
 
 .callback-button:focus,
@@ -297,7 +302,7 @@ a:focus {
   background: #ff2f9530;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
   z-index: 30;
   text-align: center;
 }
@@ -305,7 +310,6 @@ a:focus {
 .modal_display_showed {
   visibility: visible;
   opacity: 1;
-  transition: all 0.25s ease-in-out;
 }
 
 .form {
@@ -314,7 +318,6 @@ a:focus {
   position: relative;
   top: 20%;
   background: #fff;
-  transition: all 0.5s ease-in-out;
 }
 
 .form__close {
@@ -347,12 +350,14 @@ a:focus {
   width: 300px;
   height: 30px;
   font-family: "Roboto";
+  transition: border 0.2s ease-in-out;
 }
 
 .form__textarea {
   width: 300px;
   resize: vertical;
   font-family: "Roboto";
+  transition: background-color 0.2s ease-in-out;
 }
 
 .form__button {
@@ -366,18 +371,13 @@ a:focus {
 }
 
 .form__input:hover,
-.form__input:focus {
-  background-color: rgb(211, 211, 211);
-  border: 1px solid #f82370;
-  transition: all 0.2s ease-in-out;
-}
-
+.form__input:focus,
 .form__textarea:hover,
 .form__textarea:focus {
   background-color: rgb(211, 211, 211);
   border: 1px solid #f82370;
-  transition: all 0.2s ease-in-out;
 }
+
 
 @media (max-width: 600px) {
   .form {
@@ -604,14 +604,13 @@ a:focus {
   font-family: "Roboto";
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
 .button:hover {
   background-color: transparent;
   color: #f53f4f;
   border: 1px solid #f82370;
-  transition: all 0.2s ease-in-out;
 }
 
 .top__button {
@@ -1305,20 +1304,22 @@ a:focus {
   .footer-contacts__link {
     margin-left: 0;
   }
+
   .footer-contacts__link {
   line-height: 47px;
   }
+
   .footer__button {
     width: 280px;
     height: 55px;
     background-color: #ff4e2e;
     color: #ffffff;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
   }
   .footer__button:hover {
     background-color: transparent;
     color: #f53f4f;
     border: 1px solid #f82370;
-    transition: all 0.2s ease-in-out;
   }
   .footer__social {
     margin: 47px 0 0;
